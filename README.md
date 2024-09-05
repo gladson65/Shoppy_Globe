@@ -24,5 +24,8 @@
 
     7. This web app handles errors like wrong path, no data etc.
 
+### Used Technologies:
+-   REACT, REDUX, VITE, CSS, TAILWIND, FONT-AWESOME, HTML, JAVASCRIPT.
+
 ### Git-hub link
 - [@https://github.com/gladson65/Shoppy_Globe]
