@@ -1,0 +1,20 @@
+.LandingPage{
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background-image: url("../assets/landingBack2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 5% 10% 5%;
+}
+
+.categorySection {
+    width: 100vw;
+    height: auto;
+}
+
+.banner {
+    background-image: url("../assets/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
