@@ -43,7 +43,7 @@ function Header() {
                         
                     </div>
 
-                    <div className={`${toggleMenu ? "hidden" : "flex flex-col gap-7"} absolute top-28 right-0 list-none bg-blue-300 p-4 w-1/2 h-72 rounded-xl z-50`}> 
+                    <div className={`${toggleMenu ? "hidden" : "flex flex-col gap-7"} absolute top-28 right-0 list-none bg-blue-300 p-4 w-1/2 h-72 rounded-xl z-50 font-serif`}> 
                         <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/"><span className="drop-shadow-[0px_10px_10px_black]">Home</span></Link>
                         <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/productList"><span className="drop-shadow-[0px_10px_10px_black]">Product List</span></Link>
                         <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/cart"><span className="drop-shadow-[0px_10px_10px_black]">Cart</span></Link>

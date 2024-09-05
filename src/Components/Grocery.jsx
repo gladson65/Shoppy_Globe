@@ -6,6 +6,8 @@ import { addItem } from "../Utils/CartSlice";
 import { success } from "../Utils/CartSlice";
 import { useContext } from "react";
 import msgContext from "../Utils/msgContext";
+import Loading from "./Loading";
+import Error from "./Error";
 
 function Grocery() {
 
@@ -45,9 +47,20 @@ function Grocery() {
         <div className="relative">
             <h1 className="mt-40 text-center text-2xl font-bold drop-shadow-[0px_10px_10px_black]">Shop</h1>
 
-            {/* msg for product adition into the cart */}
+            {
+                error &&
+                <>
+                    <Error />
+                </>
+                
+            }
+
+            {
+                loading &&
+                <Loading />
+            }
             
-            <section className="fragranceProducts w-1/2 w-full h-auto mt-7 px-7 sm:px-12 md:px-24 grid grid-cols-2 lg:grid-cols-3 xl:gap-12 xl:px-40 gap-2 sm:gap-4">
+            <section className="fragranceProducts w-1/2 w-full h-auto mt-7 px-7 pb-14 sm:px-12 md:px-24 grid grid-cols-2 lg:grid-cols-3 xl:gap-12 xl:px-40 gap-2 sm:gap-4">
             {
                 groceryProduct &&                
                 groceryProduct.map((item)=> {
@@ -72,10 +85,7 @@ function Grocery() {
                 })
             }
 
-            {
-                error &&
-                <h1 className="mt-42">No data Found</h1>
-            }
+            
             </section>
         </div>
         </>

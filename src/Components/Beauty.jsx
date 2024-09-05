@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { success } from "../Utils/CartSlice";
 import { addItem } from "../Utils/CartSlice";
+import Error from "./Error";
+import Loading from "./Loading";
 
 
 function Beauty() {
@@ -37,7 +39,18 @@ function Beauty() {
     return(
         <>
             <h1 className="mt-40 text-center text-2xl font-bold drop-shadow-[0px_10px_10px_black]">Shop</h1>
-            <section className="beautyProducts w-1/2 w-full h-auto mt-7 px-7 sm:px-12 md:px-24 grid grid-cols-2 lg:grid-cols-3 xl:gap-12 xl:px-40 gap-2 sm:gap-4">
+            
+            {
+                error &&
+                <Error />
+            }
+
+            {
+                loading &&
+                <Loading />
+            }
+            
+            <section className="beautyProducts w-1/2 w-full h-auto mt-7 px-7 pb-14 sm:px-12 md:px-24 grid grid-cols-2 lg:grid-cols-3 xl:gap-12 xl:px-40 gap-2 sm:gap-4">
             {
                 beautyProduct &&                
                 beautyProduct.map((item)=> {
@@ -59,6 +72,8 @@ function Beauty() {
                     }
                 })
             }
+
+            
             </section>
         </>
     )

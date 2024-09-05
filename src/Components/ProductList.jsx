@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import useFetch from '../Utils/useFetch';
 import ProductItem from "./ProductItem";
 import Loading from "./Loading";
+import Error from "./Error";
 
 
 
@@ -9,18 +10,23 @@ function ProductList() {
 
     // storing fetched data in this state
     const [productList, setProductList] = useState([]);
+    const [backup, setBackup] = useState([]);
     const {loading, error, data} = useFetch("https://dummyjson.com/products")
-    const [isdata, setIsData] = useState(false)
+    const [isData, setIsData] = useState(false);
 
     useEffect(()=> {
         if(data) {
         setProductList(data.products)
+        setBackup(data)
         }
 
-        if (error) {
-            console.log(error);
+        if (isData === true) {
+           setTimeout(()=> {
+            setIsData(false)
+           }, 3000)            
         }
-    },[data])
+
+    },[data, isData])
 
     
     // function for search text
@@ -36,17 +42,20 @@ function ProductList() {
             return product.title.toLowerCase().includes(searchText)
         })
         
-        setProductList(searchedData);
-        
-        if (productList.length <= 0) {
-            setIsData(false)
+        if (searchedData.length < 1) {
+            setProductList(backup.products)
+            setIsData(!isData)
         }
-        document.querySelector("#input").value = "";
-        console.log(searchText)
+        else {            
+            setIsData(false)
+            setProductList(searchedData)
+        }
         
+        document.querySelector("#input").value = "";  
     }
-    
+        
    
+    
 
 
     return (
@@ -59,14 +68,19 @@ function ProductList() {
                         hover:font-bold" type="button">Search</button>   
             </div>
 
-            <h1 className="absolute top-72 md:top-60 w-full text-center text-2xl lg:text-3xl lg:py-2 drop-shadow-[0px_10px_10px_black]">All Products Here</h1>
+            <h1 className="absolute top-72 font-mono md:top-60 w-full text-center text-2xl lg:text-3xl lg:py-2 drop-shadow-[0px_10px_10px_black]">All Products Here</h1>
             
             {
                 loading &&
                 <Loading/>
             }
+
+            {
+                error &&
+                <Error />
+            }
             
-            <section className="productList md:mt-32 mt-32 w-full h-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-7 sm:gap-12 px-2 sm:px-12 pt-12 pb-24">                
+            <section className="productList md:mt-32 mt-32 w-full h-auto grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-7 sm:gap-12 px-2 sm:px-12 pt-12 pb-24 relative">                
                 
                 {
                     productList &&
@@ -78,9 +92,9 @@ function ProductList() {
 
 
                 {
-                    isdata &&
-                    <div className="w-full mx-auto flex justify-center items-center">
-                        <h1 className="text-center">No Data Found...</h1>
+                    isData &&
+                    <div className="absolute top-0 text-white bg-black w-full mx-auto flex justify-center items-center">
+                        <h1 className="text-center text-yellow-300 sm:text-2xl py-2">Aise wahiyat product hum nahi bechte. Sorry, We Don't sell that!</h1>
                     </div>
                 }
                 
