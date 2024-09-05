@@ -27,7 +27,7 @@ function DetailsCard(props) {
             </div>
 
             <h1 className="py-5 w-full text-center text-3xl text-red-700 drop-shadow-[0px_10px_10px_black]">Reviews</h1>
-            <div className="reviews w-full h-auto bg-slate-800 py-7 grid xl:grid-cols-3 sm:grid-cols-2 gap-7 px-12">
+            <div className="reviews w-full h-auto bg-slate-800 py-7 grid xl:grid-cols-3 sm:grid-cols-2 gap-7 px-12 mb-7">
                 {
                     reviews &&
                     reviews.map((review, i) => {

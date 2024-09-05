@@ -10,7 +10,7 @@ function Cart() {
     return(
         <>
             <h1 className="mt-40 w-full text-2xl drop-shadow-[0px_10px_10px_black] text-center text-black font-mono">Your Cart</h1>
-            <section className={`w-full h-auto mt-12 bg-zinc-200 grid ${items.length > 0 ? "grid-cols-2" : "grid-cols-1"} md:grid-cols-1 gap-7 py-7 px-7 xl:px-32`}>
+            <section className={`w-full h-auto mt-12 bg-zinc-200 grid ${items.length > 0 ? "grid-cols-2" : "grid-cols-1"} md:grid-cols-1 gap-7 py-7 mb-32 px-7 xl:px-32`}>
                 {
                     items.length > 0 ?
                     items.map((item)=> {
