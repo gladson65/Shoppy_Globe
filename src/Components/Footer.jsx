@@ -8,27 +8,27 @@ function Footer() {
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2 text-sm">
                         <h1 className="text-lg font-bold text-yellow-200 tracking-widest">Connect</h1>
-                        <h3>Instagram</h3>
-                        <h3>Facebook</h3>
-                        <h3>Twitter</h3>
-                        <h3>Threads</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">Instagram</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">Facebook</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">Twitter</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">Threads</h3>
                     </div>
                     <div className="flex flex-col items-center justify-center md:justify-start gap-2 text-sm">
                         <h1 className="text-lg font-bold text-red-500 tracking-widest">Help</h1>
-                        <h3>FAQ</h3>
-                        <h3>Contact Us</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">FAQ</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">Contact Us</h3>
                     </div>
                     <div className="flex flex-col items-center justify-center md:justify-start gap-2 text-sm">
                         <h1 className="text-lg font-bold text-blue-300 tracking-widest">About</h1>
-                        <h3>Our Story</h3>
-                        <h3>Our Team</h3>
-                        <h3>Our Vision</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">Our Story</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">Our Team</h3>
+                        <h3 className="cursor-pointer hover:underline hover:decoration-sky-500 hover:underline-offset-4">Our Vision</h3>
                     </div>
                 </div>
                 <div className="text-black flex justify-between items-center py-2 px-4 bg-slate-300">
-                    <h2>&copy; 2024 SHOPPYGLOBE</h2>
-                    <h2>Made by Human</h2>
-                    <img src="../src/assets/cart.png" alt="footer pic" className="w-7"/>
+                    <h2 className="cursor-pointer">&copy; 2024 SHOPPYGLOBE</h2>
+                    <h2 className="cursor-pointer">Made by Human</h2>
+                    <img src="../src/assets/cart.png" alt="footer pic" className="w-7 cursor-pointer"/>
                 </div>
             </section>
         </>
