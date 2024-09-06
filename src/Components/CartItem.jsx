@@ -14,7 +14,6 @@ function CartItem(props) {
 
     function increaseQuantity(item) {
         dispatch(increment(item.id))
-        console.log(item.id)
     }
 
     function decrementQuantity(item) {
@@ -23,7 +22,6 @@ function CartItem(props) {
 
     function remove(item) {
         dispatch(removeItem(item))
-        console.log(item)
     }
 
     return(

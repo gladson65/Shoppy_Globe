@@ -50,7 +50,7 @@ const cartSlice = createSlice({
             let item = state.items.find((item) => item.id === action.payload.id);
             const newArr = state.items.filter((item)=> item.id != action.payload.id)
             state.items = newArr;
-            console.log(item.id)
+            
         },
 
         clearCart: (state, acton) => {
