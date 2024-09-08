@@ -7,7 +7,7 @@ function CartItem(props) {
 
     const items = useSelector((store)=> store.cart.items);
     const dispatch = useDispatch();
-    const data = props.info
+    const data = props.info;
     const {id, title, brand, quantity, thumbnail, price, rating, stock} = props.info;
 
     
