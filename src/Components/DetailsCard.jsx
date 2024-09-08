@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function DetailsCard(props) {
 
-   
+    // destructuring from props.info    
     const {title, images, price, rating, stock, warrantyInformation, description, reviews,
             returnPolicy} = props.info;
     
