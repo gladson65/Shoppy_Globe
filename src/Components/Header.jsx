@@ -52,7 +52,7 @@ function Header() {
                     </div>
 
                     <div className="px-4 relative overflow-hidden">
-                        <Link to="/cart"><img src="\src\assets\cart.png" alt="Cart-Image" className="w-8 md:w-10 transition-all duration-300 linear hover:scale-75"/></Link>
+                        <Link to="/cart"><img src="cart.png" alt="Cart-Image" className="w-8 md:w-10 transition-all duration-300 linear hover:scale-75"/></Link>
                         <span className="absolute top-3 text-white bg-orange-400 rounded-full px-1  text-sm">{cartItems.length > 0 ? cartItems.length : "0"}</span>
                     </div>
 
