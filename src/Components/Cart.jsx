@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function Cart() {
 
+    // extracting the state of a component from the redux store
     const items = useSelector((store)=> store.cart.items); 
 
    
