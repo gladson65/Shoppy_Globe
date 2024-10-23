@@ -87,7 +87,7 @@ function Header() {
 
                         <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to={username == '' ? "/sign-in" : "/dashboard"}>
                             <span className="drop-shadow-[0px_10px_10px_black]">
-                                {username == '' ? "Sign in" : username}
+                                {username == '' || username == null ? "Sign in" : username}
                             </span>
                         </Link>
 
