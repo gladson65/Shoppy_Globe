@@ -4,14 +4,9 @@ import { useState } from "react";
 
 function DetailsCard(props) {
 
-<<<<<<< HEAD
+
    
-    const {title, thumbnail, price, rating, stock, description, reviews,
-=======
-    // destructuring from props.info    
-    const {title, images, price, rating, stock, warrantyInformation, description, reviews,
->>>>>>> 619006f7133dca09b13e16774948fdd60eaff0f5
-            returnPolicy} = props.info;
+    const {title, thumbnail, price, rating, stock, description, reviews, returnPolicy} = props.info;
     
     console.log(props.info)    
     return(
