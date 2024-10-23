@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 function Header() {
 
     const username = localStorage.getItem('username');
+    console.log(username);
     const cartItems = useSelector((store) => store.cart.items);
     const [toggleMenu, setToggleMenu] = useState(true);
 
