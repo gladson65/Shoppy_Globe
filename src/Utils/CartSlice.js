@@ -26,7 +26,7 @@ const cartSlice = createSlice({
         },
 
         increment: (state, action) => {
-            let item = state.items.find((item) => item.id === action.payload)
+            let item = state.items.find((item) => item._id === action.payload)
             
             if (item && item.quantity >= 1) {
                 item.quantity++;
@@ -34,7 +34,7 @@ const cartSlice = createSlice({
         },
 
         decrement: (state, action) => {
-            let item = state.items.find((item) => item.id === action.payload);
+            let item = state.items.find((item) => item._id === action.payload);
 
             if (!item || item.quantity <= 1) {
                 alert("Atleast One Product")
@@ -47,8 +47,8 @@ const cartSlice = createSlice({
 
         removeItem: (state, action) => {
             // state.items.pop(action.payload);
-            let item = state.items.find((item) => item.id === action.payload.id);
-            const newArr = state.items.filter((item)=> item.id != action.payload.id)
+            let item = state.items.find((item) => item._id === action.payload._id);
+            const newArr = state.items.filter((item)=> item._id != action.payload._id)
             state.items = newArr;
             
         },
