@@ -1,4 +1,4 @@
-# This is s simple E-Commerce Web Project by using React + Vite. 
+# This is s simple E-Commerce Web Project by using React + Vite + Redux + Node.js + Express + MongoDB 
 
 -   You can choose your product and put into the cart and shop it.
 
@@ -25,7 +25,7 @@
     7. This web app handles errors like wrong path, no data etc.
 
 ### Used Technologies:
--   REACT, REDUX, VITE, CSS, TAILWIND, FONT-AWESOME, HTML, JAVASCRIPT.
+-   REACT, REDUX, VITE, CSS, TAILWIND, FONT-AWESOME, HTML, JAVASCRIPT, EXPRESS, MONGODB
 
 ### Git-hub link
 - [@https://github.com/gladson65/Shoppy_Globe]
