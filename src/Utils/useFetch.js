@@ -10,7 +10,15 @@ function useFetch(url) {
 
         const fetchData = async() => {
             try {
-                const response = await fetch(url);
+                const token = localStorage.getItem('accessToken')
+                const response = await fetch(url, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "authorization": `JWT ${token}`
+                    }
+                    
+                });
                 const result = await response.json();
                 setData(result);
             }

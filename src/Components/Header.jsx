@@ -1,16 +1,21 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
 
-
+    const username = localStorage.getItem('username');
     const cartItems = useSelector((store) => store.cart.items);
     const [toggleMenu, setToggleMenu] = useState(true);
 
     function menuBar() {
         setToggleMenu(!toggleMenu);
     }
+
+    useEffect(() => {
+        toggleMenu;
+    }, [username])
+
 
     return(
         <>
@@ -22,9 +27,28 @@ function Header() {
                     </p>
                     
                     <div className="md:flex justify-around items-center w-1/3 hidden list-none">
-                        <Link className="p-2" to="/"><li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">Home</li></Link>
-                        <Link to="/productList"><li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">Product List</li></Link>
-                        <Link to="/cart"><li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">Cart</li></Link>
+                        
+                        <Link className="p-2" to="/">
+                            <li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">
+                                Home
+                            </li>
+                        </Link>
+                        <Link to="/productList">
+                            <li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">
+                                Product List
+                            </li>
+                        </Link>
+                        <Link to="/cart">
+                            <li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">
+                                Cart
+                            </li>
+                        </Link>
+                        <Link to={username == '' ? "/sign-in" : "/dashboard"}>
+                            <li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">
+                                {username == '' ? "Sign in" : username}
+                            </li>
+                        </Link>
+
                     </div>
 
                     <div className="px-4 relative overflow-hidden">
@@ -43,10 +67,30 @@ function Header() {
                         
                     </div>
 
-                    <div className={`${toggleMenu ? "hidden" : "flex flex-col gap-7"} absolute top-28 right-0 list-none bg-blue-300 p-4 w-1/2 h-72 rounded-xl z-50 font-serif`}> 
-                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/"><span className="drop-shadow-[0px_10px_10px_black]">Home</span></Link>
-                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/productList"><span className="drop-shadow-[0px_10px_10px_black]">Product List</span></Link>
-                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/cart"><span className="drop-shadow-[0px_10px_10px_black]">Cart</span></Link>
+                    <div className={`${toggleMenu ? "hidden" : "flex flex-col gap-7"} absolute top-28 h-auto right-0 list-none bg-blue-300 p-4 w-1/2 h-72 rounded-xl z-50 font-serif`}> 
+                        
+                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/">
+                            <span className="drop-shadow-[0px_10px_10px_black]">
+                                Home
+                            </span>
+                        </Link>
+                        
+                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/productList">
+                            <span className="drop-shadow-[0px_10px_10px_black]">
+                                Product List
+                            </span>
+                        </Link>
+
+                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to="/cart">
+                            <span className="drop-shadow-[0px_10px_10px_black]">Cart</span>
+                        </Link>
+
+                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to={username == '' ? "/sign-in" : "/dashboard"}>
+                            <span className="drop-shadow-[0px_10px_10px_black]">
+                                {username == '' ? "Sign in" : username}
+                            </span>
+                        </Link>
+
                     </div>    
                 </div>
 

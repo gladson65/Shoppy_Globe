@@ -14,7 +14,10 @@ const Beauty = lazy(()=> import("./Components/Beauty"));
 const Fragrance = lazy(()=> import("./Components/Fragrances"));
 const Grocery = lazy(()=> import("./Components/Grocery"));
 const Furniture = lazy(()=> import("./Components/Furniture"));
+const SignIn = lazy(()=> import ("./Components/Sign_login"));
+const AdminDashBoard = lazy(() => import('./Components/AdminDashboard'));
 const Error = lazy(()=> import("./Components/Error"));
+
 
 // creating appRouter
 const appRouter = createBrowserRouter([
@@ -30,6 +33,15 @@ const appRouter = createBrowserRouter([
       },
 
       {
+        path: "/sign-in",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <SignIn />
+          </Suspense>
+        )
+      },
+
+      {
         path: "/productList",
         element: <Suspense>
                   <ProductList /> 
@@ -42,12 +54,23 @@ const appRouter = createBrowserRouter([
                   <ProductDetails />
                  </Suspense>
       },
+      
       {
         path: "/cart",
         element: <Suspense>
                   <Cart />
                  </Suspense>
       },
+
+      {
+        path: "/dashboard",
+        element: (
+          <Suspense fallback={<div>Loading...</div>}>
+            <AdminDashBoard />
+          </Suspense>
+        )
+      },
+
       {
         path: "/beauty/products",
         element: <Suspense><Beauty /></Suspense>

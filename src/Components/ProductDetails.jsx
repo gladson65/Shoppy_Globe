@@ -8,16 +8,16 @@ function ProductDetails() {
 
     let param = useParams();
    
-    const {data, loading, error} = useFetch("https://dummyjson.com/products")
+    const {data, loading, error} = useFetch("http://localhost:7100/products")
     const [product, setProducts] = useState([]);
-    const [dtails, setDetails] = useState([])
+    const [dtails, setDetails] = useState([]);
   
 
     
     
     useEffect(() => {
         if(data) {
-            setProducts(data.products)
+            setProducts(data)
         }
 
         
@@ -31,11 +31,12 @@ function ProductDetails() {
             
                 {
                     product &&
-
+                    
                     product.map((item)=> {
-                        if(item.id === Number(param.id)){
-                            return <DetailsCard key={item.id} info={item}/>
-                        }
+                        
+                       
+                            return <DetailsCard key={item._id} info={item}/>
+                        
                     })    
                             
                         

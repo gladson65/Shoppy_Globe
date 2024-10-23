@@ -25,25 +25,25 @@ function LandingPage() {
 
             <section className="categorySection bg-slate-700 px-24 xl:px-24 sm:px-5 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 <Link className="font-mono hover:scale-90 transition-all duration-300 ease-in-out rounded-xl hover:drop-shadow-[0px_20px_20px_white]" to="/beauty/products"><div className="h-full p-5 rounded-xl shadow-sm bg-white hover:bg-teal-200 drop-shadow-[0px_20px_10px_black] ">
-                        <img src="src\assets\beautyCategory.jpg" alt="product-image" className="w-full rounded-lg h-80 object-cover object-top drop-shadow-[0_10px_10px_black]"/>
+                        <img src=".\src\assets\beautyCategory.jpg" alt="product-image" className="w-full rounded-lg h-80 object-cover object-top drop-shadow-[0_10px_10px_black]"/>
                         <h3 className="text-2xl text-black py-3 text-center font-medium drop-shadow-[0px_10px_10px_black]">Beauty Products</h3>
                      </div>
                 </Link>
                 <Link className="font-mono hover:scale-90 transition-all duration-300 ease-in-out rounded-xl hover:drop-shadow-[0px_20px_20px_white]" to="/fragrance/products"><div className="h-full p-5 rounded-xl shadow-sm bg-white hover:bg-teal-200 drop-shadow-[0px_20px_10px_black]">
-                    <img src="src\assets\fragranceCategory.jpg" alt="product-image" className="w-full rounded-lg h-80 object-cover object-top drop-shadow-[0_10px_10px_black]"/>
+                    <img src=".\src\assets\fragranceCategory.jpg" alt="product-image" className="w-full rounded-lg h-80 object-cover object-top drop-shadow-[0_10px_10px_black]"/>
                     <h3 className="text-2xl text-black py-3 text-center font-medium drop-shadow-[0px_10px_10px_black]">Fragrances</h3>
                 </div>
                 </Link>
                 
                 <Link className="font-mono hover:scale-90 transition-all duration-300 ease-in-out rounded-xl hover:drop-shadow-[0px_20px_20px_white]" to="/grocery/products"><div className="h-full p-5 rounded-xl shadow-sm bg-white hover:bg-teal-200 drop-shadow-[0px_20px_10px_black]">
-                    <img src="src\assets\groceryCategory.jpg" alt="product-image" className="w-full rounded-lg h-80 object-cover object-top drop-shadow-[0_10px_10px_black]"/>
+                    <img src=".\src\assets\groceryCategory.jpg" alt="product-image" className="w-full rounded-lg h-80 object-cover object-top drop-shadow-[0_10px_10px_black]"/>
                     <h3 className="text-2xl text-black py-3 text-center font-medium drop-shadow-[0px_10px_10px_black]">Grocery</h3>
                 </div>
                 </Link>
                 
                 <Link className="font-mono hover:scale-90 transition-all duration-300 ease-in-out rounded-xl hover:drop-shadow-[0px_20px_20px_white]" to="/furniture/products">
                 <div className="h-full p-5 rounded-xl shadow-sm bg-white hover:bg-teal-200 drop-shadow-[0px_20px_10px_black]">
-                    <img src="src\assets\furnitureCategory.jpg" alt="product-image" className="w-full rounded-lg h-80 object-cover object-top drop-shadow-[0_10px_10px_black]"/>
+                    <img src=".\src\assets\furnitureCategory.jpg" alt="product-image" className="w-full rounded-lg h-80 object-cover object-top drop-shadow-[0_10px_10px_black]"/>
                     <h3 className="text-2xl text-black py-3 text-center font-medium drop-shadow-[0px_10px_10px_black]">Furniture</h3>
                 </div>
                 </Link>

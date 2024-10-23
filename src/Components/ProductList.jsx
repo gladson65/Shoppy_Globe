@@ -11,13 +11,17 @@ function ProductList() {
     // storing fetched data in this state
     const [productList, setProductList] = useState([]);
     const [backup, setBackup] = useState([]);
-    const {loading, error, data} = useFetch("https://dummyjson.com/products")
+    const {loading, error, data} = useFetch("http://localhost:7100/products")
     const [isData, setIsData] = useState(false);
 
     useEffect(()=> {
         if(data) {
-        setProductList(data.products)
+        setProductList(data)
         setBackup(data)
+        if (data.message == 'jwt expired') {
+            localStorage.setItem('username', '')
+        }
+        console.log(data)
         }
 
         if (isData === true) {
@@ -84,8 +88,8 @@ function ProductList() {
                 
                 {
                     productList &&
-                    productList.map((product)=> {
-                        return <ProductItem key={product.id} info={product}/>
+                    productList.map((product, i)=> {
+                        return <ProductItem key={product._id} info={product}/>
                     })                     
                     
                 }
@@ -94,7 +98,7 @@ function ProductList() {
                 {
                     isData &&
                     <div className="absolute top-0 text-white bg-black w-full mx-auto flex justify-center items-center">
-                        <h1 className="text-center text-yellow-300 sm:text-2xl py-2">Aise wahiyat product hum nahi bechte. Sorry, We Don't sell that!</h1>
+                        <h1 className="text-center text-yellow-300 sm:text-2xl py-2">Sorry, We Don't sell that!</h1>
                     </div>
                 }
                 

@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 function ProductItem(props) {
 
-    const {id, title, brand, thumbnail, price, rating, stock} = props.info;
+    const {_id, title, brand, thumbnail, price, rating, stock} = props.info;
     const dispatch = useDispatch();
     const [successMsg, setSuccessMsg] = useState(true);
     
@@ -21,7 +21,7 @@ function ProductItem(props) {
         setTimeout(()=> {
             setSuccessMsg(false);
             dispatch(success(false))
-           
+            
         }, 3000)
     }, [successMsg])
 
@@ -35,7 +35,7 @@ function ProductItem(props) {
                 <h4 className="pl-2 text-sm md:text-lg text-purple-800 font-bold">{price} <span className="text-black">&#36;</span></h4>
                 <h4 className="pl-2 text-sm md:text-lg text-sky-600 font-bold">Ratings: <span className="text-black">{rating}</span></h4>
                 <h4 className="pl-2 text-sm md:text-lg text-red-700 font-bold">In Stock: <span className="text-black">{stock}</span></h4>
-                <Link to={`/product/details/${id}`}><button className="pl-2 hover:text-yellow-400 font-bold">View Details</button></Link>
+                <Link to={`/product/details/${_id}`}><button className="pl-2 hover:text-yellow-400 font-bold">View Details</button></Link>
                 <div className="w-full flex justify-center mt-2 mb-2">
                 <button onClick={()=>addToCart(props.info)} className="bg-yellow-300 rounded-lg px-2 py-2 w-10/12 md:w-1/2 hover:bg-yellow-400">
                    Add To Cart
