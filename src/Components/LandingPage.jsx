@@ -13,7 +13,7 @@ function LandingPage() {
                 </div>
                 
                 <div className="mt-40 backdrop-blur-sm lg:mt-52 h-96 order-first md:order-none md:h-screen md:w-screen lg:w-4/5 w-5/6 p-5 md:w-full lg:w-1/2 bg-transparent rounded-full">
-                    <img className="w-full h-full drop-shadow-[0px_20px_20px_skyblue]" src=".\assets\woman.png" alt="woman-image"/>
+                    <img className="w-full h-full drop-shadow-[0px_20px_20px_skyblue]" src="woman.png" alt="woman-image"/>
                 </div>
 
                 <div className="banner font-mono flex flex-col justify-around items-center absolute bottom-0 w-10/12 md:w-2/5 md:h-52 lg:w-2/5 xl:w-1/2 bottom-2 w-11/12 sm:w-10/12 mb-4 md:top-64 md:left-16 lg:left-22 xl:top-64 xl:left-22 py-4 px-5 bg-yellow-200 sm:bg-slate-700 rounded-xl">
