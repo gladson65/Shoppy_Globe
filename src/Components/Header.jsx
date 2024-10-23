@@ -38,11 +38,11 @@ function Header() {
                                 Product List
                             </li>
                         </Link>
-                        <Link to="/cart">
+                        {/* <Link to="/cart">
                             <li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">
                                 Cart
                             </li>
-                        </Link>
+                        </Link> */}
                         <Link to={username == '' ? "/sign-in" : "/dashboard"}>
                             <li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">
                                 {username == '' ? "Sign in" : username}
