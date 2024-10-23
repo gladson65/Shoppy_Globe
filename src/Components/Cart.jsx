@@ -14,10 +14,10 @@ function Cart() {
             <section className={`w-full h-auto mt-12 bg-zinc-200 grid ${items.length > 0 ? "grid-cols-2" : "grid-cols-1"} md:grid-cols-1 gap-7 py-7 mb-32 px-7 xl:px-32`}>
                 {
                     items.length > 0 ?
-                    items.map((item)=> {
+                    items.map((item, i)=> {
                         return (
                             
-                                <CartItem key={item.id} info={item}/>
+                                <CartItem key={i} info={item}/>
                             
                         )
                     })

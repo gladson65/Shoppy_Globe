@@ -32,11 +32,10 @@ function ProductDetails() {
                 {
                     product &&
                     
-                    product.map((item)=> {
-                        
-                       
+                    product.map((item)=> {    
+                        if(item._id == param.id){
                             return <DetailsCard key={item._id} info={item}/>
-                        
+                        }
                     })    
                             
                         

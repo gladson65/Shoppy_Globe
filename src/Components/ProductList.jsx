@@ -21,7 +21,7 @@ function ProductList() {
         if (data.message == 'jwt expired') {
             localStorage.setItem('username', '')
         }
-        console.log(data)
+        
         }
 
         if (isData === true) {

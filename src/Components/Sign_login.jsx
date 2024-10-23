@@ -106,7 +106,7 @@ function SignIn() {
                 localStorage.setItem("login", 'true');
                 navigate("/");
             }
-            console.log(data)
+            
         })
     }
 
