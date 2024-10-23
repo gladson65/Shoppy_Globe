@@ -44,7 +44,7 @@ function Header() {
                                 Cart
                             </li>
                         </Link>
-                        <Link to={username == '' ? "/sign-in" : "/dashboard"}>
+                        <Link to={username == '' || username == null ? "/sign-in" : "/dashboard"}>
                             <li className="hover:text-yellow-300 hover:scale-90 transition-all duration-300 linear hover:drop-shadow-[0Px_10px_10px_black] p-2">
                                 {username == '' || username == null ? "Sign in" : username}
                             </li>
@@ -86,7 +86,7 @@ function Header() {
                             <span className="drop-shadow-[0px_10px_10px_black]">Cart</span>
                         </Link>
 
-                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to={username == '' ? "/sign-in" : "/dashboard"}>
+                        <Link className="bg-yellow-200 rounded-lg hover:bg-slate-700 text-center py-4 transition-all duration-300 linear drop-shadow-[0px_10px_10px_black] hover:drop-shadow-[0px_5px_10px_lightgreen] hover:text-white" to={username == '' || username == null ? "/sign-in" : "/dashboard"}>
                             <span className="drop-shadow-[0px_10px_10px_black]">
                                 {username == '' || username == null ? "Sign in" : username}
                             </span>
