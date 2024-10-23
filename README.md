@@ -2,14 +2,19 @@
 
 -   You can choose your product and put into the cart and shop it.
 
-### instruction: -  How to Run:
+## instruction: -  How to Run:
     1. This is a React + Vite project. So first go to the terminal and type 'cd ShoppyGlobe'
         - 'npm install' (install NODE Module if no NODE Module is their in your machine)
         - 'npm run dev' 
     The web app will run on your browser.
 
-    2. This app is fetching data from 'https://dummyjson.com/products' API. At first you will be land on the landing page.
-    -   where you can get four categories of products. click and start shopping.
+    2. This app is fetching data from 'localhost API' which is inside src->NodeJS-->shoppy.routes file.
+
+        -  At first you need to run server which is in NodeJs folder.
+        -  It is using MONGODB database so set MONGODB instance.
+        -  At first you get landing page. To shop or see products you have to sign/login first.
+        - For sign/login click on sign in button in header section.
+        - Now go and explore the app. 
 
     3. you can directly go to the product lists page by clicking on the product button which is in the header section.
     -   Select product and add to the cart and checkout.  
@@ -25,7 +30,7 @@
     7. This web app handles errors like wrong path, no data etc.
 
 ### Used Technologies:
--   REACT, REDUX, VITE, CSS, TAILWIND, FONT-AWESOME, HTML, JAVASCRIPT, EXPRESS, MONGODB
+-   REACT, REDUX, VITE, CSS, TAILWIND, FONT-AWESOME, HTML, JAVASCRIPT, EXPRESS, MONGODB, JWT
 
 ### Git-hub link
 - [@https://github.com/gladson65/Shoppy_Globe]
